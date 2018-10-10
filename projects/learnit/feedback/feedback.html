@@ -1,0 +1,64 @@
+<!--
+    Data Handling and Web Concepts 
+    Project 2 - Web Project
+    Charles Tiriamai
+    90053917
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Feedback Page</title>
+        <meta name="description" content="Please enter your feedback here.">
+        <link rel="stylesheet" href="feedback-style.css" type="text/css">
+    </head>
+    <body>
+        <!-- NAV CONTAINER-->
+        <header id="nav-container">
+            <!-- MAIN NAV-->
+            <nav id="main-nav">
+                <h1 id="title-h1">
+                    <span id="learn">Learn</span><span id="it">IT</span>
+                </h1>
+                <section id="nav-right-aligned">
+                    <a href="../databases/database-features.html" id="database-link">
+                        <h2 id="database-h2">Database</h2>
+                    </a>
+                    <a href="../sql/sql-create-command.html" id="sql-link">
+                        <h2 id="sql-h2">SQL</h2>
+                    </a>  
+                    <a href="../web-design/usability.html" id="web-design-link">
+                        <h2 id="web-design-h2">Web Design</h2>
+                    </a>       
+                    <a href="../feedback/feedback.html" id="feedback-link" class="active">
+                        <h2 id="feedback-h2">Feedback</h2>
+                    </a>
+                    <a href="../privacy/privacy-policy.html" id="privacy-link">
+                        <h2 id="feedback-h2">Privacy</h2>
+                    </a>
+                </section>
+            </nav>
+		</header>
+        <main>
+            <!-- ADAPTED FROM https://www.w3schools.com/html/html_form_attributes.asp-->
+            <form action="../thanks/thanks.html" target="_blank">
+                <div id="form-grid">
+                    <div id="name-email-form-section">
+                        <label for="firstname">First name:</label>
+                        <br><input type="text" id="firstname" name="firstname" placeholder="First Name" autofocus><br>
+                        <label for="lastname">Last name:</label>
+                        <br><input type="text" id="lastname" name="lastname" placeholder="Last Name"><br>
+                        <label for="email">Email:</label> 
+                        <br><input type="email" id="email" name="email" placeholder="username@example.com"><br>
+                    </div>
+                    <div id="suggestion-form-section">
+                        <label for="suggestion">Suggestion:</label>
+                        <textarea id="suggestion" name="suggestion" placeholder="Write your suggestion here..." required></textarea>
+                        <br>
+                    </div>
+                </div>
+                <input type="submit" value="SUBMIT">
+            </form>
+        </main>
+    </body>
+</html>
