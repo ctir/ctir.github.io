@@ -1,0 +1,32 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 45px;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(182, 160, 219, 0.8);
+	color: white;
+}
+
+main {
+	width: 400px;
+	margin: 400px auto;
+	text-align: center;
+}
+
+#404-error {
+	margin: 300px auto;
+}
+
+#full-name {
+	margin: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #1f1f1f;
+	font-size: 30px;
+}
+
+a:hover {
+	color: #7f7f7f;
+}
