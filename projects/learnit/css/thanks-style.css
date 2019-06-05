@@ -4,8 +4,9 @@
     Charles Tiriamai
     90053917
 */
-@import url("../main-style.css");
-html{
-    background: url("thank-you-sign-min.jpg") no-repeat center center fixed;
-    background-size: cover;
+
+@import url("./main-style.css");
+html {
+	background: url("thank-you-sign-min.jpg") no-repeat center center fixed;
+	background-size: cover;
 }

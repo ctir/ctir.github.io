@@ -4,48 +4,56 @@
     Charles Tiriamai
     90053917
 */
-@import url("../main-style.css");
-html{
-    background: url("chalkboard-feedback-min.jpg") no-repeat center center fixed;
-    background-size: cover;
+
+@import url("./main-style.css");
+html {
+	background: url("chalkboard-feedback-min.jpg") no-repeat center center fixed;
+	background-size: cover;
 }
-main{
-    width: 850px;
-    margin: 0 auto;
+
+main {
+	width: 850px;
+	margin: 0 auto;
 }
-h3{
-    font-size: 50px;
-    margin: 55px 0 50px 0;
-    text-align: center;
+
+h3 {
+	font-size: 50px;
+	margin: 55px 0 50px 0;
+	text-align: center;
 }
-form{
-    width: 800px;
-    padding: 20px;
-    margin-top: 500px;
-    background-color: rgba(43,113,171, 0.97);
-    border-radius: 4px;
+
+form {
+	width: 800px;
+	padding: 20px;
+	margin-top: 500px;
+	background-color: rgba(43, 113, 171, 0.97);
+	border-radius: 4px;
 }
-#form-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+
+#form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
 }
-input{
-    border: 2px solid rgba(191, 191, 191, 0.3);
-    border-radius: 3px;
-    padding: 5px;
-    margin-bottom: 15px;
+
+input {
+	border: 2px solid rgba(191, 191, 191, 0.3);
+	border-radius: 3px;
+	padding: 5px;
+	margin-bottom: 15px;
 }
-textarea{
-    border: 2px solid rgba(191, 191, 191, 0.8);
-    border-radius: 3px;
-    padding: 5px;
-    width: 600px;
-    height: 150px;
+
+textarea {
+	border: 2px solid rgba(191, 191, 191, 0.8);
+	border-radius: 3px;
+	padding: 5px;
+	width: 600px;
+	height: 150px;
 }
-input[type=submit]{
-    width: 100%;
-    padding: 15px;
-    margin: 0;
-    margin-top: 15px;
+
+input[type=submit] {
+	width: 100%;
+	padding: 15px;
+	margin: 0;
+	margin-top: 15px;
 }

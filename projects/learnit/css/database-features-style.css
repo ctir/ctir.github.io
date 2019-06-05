@@ -4,29 +4,34 @@
     Charles Tiriamai
     90053917
 */
-@import url("../main-style.css");
-#sub-nav{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+
+@import url("./main-style.css");
+#sub-nav {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
 }
-#database-features{
-    width: 1000px;
-    height: 500px;
-    margin: 0 auto;
-    margin-top: 250px;
-    background-color: rgba(155, 155, 155, 0.97);
-    border-radius: 4px;
-    padding: 50px;
+
+#database-features {
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 250px;
+	background-color: rgba(155, 155, 155, 0.97);
+	border-radius: 4px;
+	padding: 50px;
 }
-#database-feature-section{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+
+#database-feature-section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
 }
-p .more{
-    text-align: left;
+
+p .more {
+	text-align: left;
 }
-#more-list{
-    width: 1000px;
-    margin: 0 auto;
+
+#more-list {
+	width: 1000px;
+	margin: 0 auto;
 }
