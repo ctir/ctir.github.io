@@ -1,0 +1,75 @@
+/* Author: Charles Tiriamai */
+/* AzulFukai Landing Page Main-Section*/
+/* MAIN DESCRIPTION */
+main{
+  width: 800px;
+  margin: 80px auto 0px 20%;
+}
+h1{
+  font-family: sans-serif;
+  color:white; 
+  letter-spacing: 15px;
+}
+figure{
+  display: flex;
+  align-items: center;
+  color: grey;  
+  font-size: 14px;  
+}
+#blu{
+  height: 700px;
+}
+#azul{
+  position: relative;
+  margin: 100px 0 -25px 1px;
+  background: #24d9e3;
+  font-size: 80px;
+  height: 95px;
+  font-weight: 700;
+  width: 275px;
+  z-index: -1;
+}
+#fukai{
+  position: relative;
+  margin: 0 0 0 0;
+  background: #107ba7;
+  width: 300px;
+  font-size: 65px;
+  z-index: 1;
+}
+#career{  
+  letter-spacing: 14px;
+  padding: 10px 0 20px 0;
+  white-space: nowrap;
+  font-family: 'Questrial', sans-serif;
+}
+#main-description p{  
+  width: 400px;
+  min-width: 400px;
+  line-height: 15px;
+  word-spacing: 1px;
+  font-size: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  color: grey;  
+  font-family: 'Questrial', sans-serif;
+}
+#main-description a{
+  display: block;
+  padding: 11px 0px 11px 0px;
+  font-size: 12px;
+  font-weight: 700;
+  width: 210px;
+  text-align: center;
+  margin: 40px 0 0px 0;  
+  border: 3px solid #107ba7;
+  border-radius: 17px;
+  background: white;
+  color: #107ba7;
+  transition: 0.25s ease-in;
+}
+#main-description a:hover{
+  color: white;
+  background: #107ba7;
+  border: 3px solid rgba(0, 125, 250, 1);
+}

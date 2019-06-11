@@ -1,0 +1,45 @@
+/*Author: Charles Tiriamai*/
+/*GSMArena Button */
+body{
+    background: lightblue;
+    text-align: center;
+    color: white;
+    font-family: helvetica, arial, sanserif;
+    font-size: 12px;
+    font-weight: bolder;
+}
+input{
+    opacity: 0;
+}
+.diff-focus{
+    display: flex;
+}
+.or{
+    position: absolute;
+    top: 2px;
+    left: 54px;
+    background-color: white;
+    color: black;
+    width: 17px;
+    padding: 5px;
+    border-radius: 20px;
+    z-index: 2;
+}
+.focus{    
+    background: grey;
+    padding: 10px 17px 10px 10px;
+    margin: 0px;
+    border: 1px solid white;
+}
+.diff{
+    background: red;
+    padding: 10px 10px 10px 17px;
+    margin: 0px;
+    border: 1px solid white;
+}
+input[type=checkbox]:checked ~ span{
+    background: red;
+}
+input[type=checkbox]:checked  ~ div{
+    background: grey;
+}
