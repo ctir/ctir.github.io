@@ -5,7 +5,7 @@
     90053917
 */
 
-@import url("../main-style.css");
+@import url("/projects/learnit/css/main-style.css");
 main {
 	width: 750px;
 	margin: 0 auto;

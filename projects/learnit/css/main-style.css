@@ -9,7 +9,7 @@
 @import url("./sub-nav-style.css");
 @import url("./dl-shared-style.css");
 html {
-	background: url("../images/main-background.jpeg") no-repeat center center fixed;
+	background: url("/projects/learnit/images/main_background.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 

@@ -7,6 +7,6 @@
 
 @import url("./main-style.css");
 html {
-	background: url("thank-you-sign-min.jpg") no-repeat center center fixed;
+	background: url("/projects/learnit/images/thank_you_sign_min.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
