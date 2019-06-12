@@ -7,7 +7,7 @@
 
 @import url("./main-style.css");
 html {
-	background: url("chalkboard-feedback-min.jpg") no-repeat center center fixed;
+	background: url("/projects/learnit/images/chalkboard-feedback-min.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 
