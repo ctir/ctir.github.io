@@ -14,7 +14,7 @@
 	<meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<!-- End realfavicongenerator tags -->
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/main-style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,45 +23,26 @@
 
 <body>
 	<div class="page background">
-		<header class="background">
+		<header class="nav__container nav__background">
 			<span class="name">CHARLES TIRIAMAI</span>
-			<nav class="top-nav">
-				<ul class="nav__link-container">
-					<li class="nav__li">
+			<nav id="top-nav" class="top-nav">
+				<ul class="nav__grid nav__link-list">
+
+					<li class="nav__link-container">
 						<a href="" class="nav__link">
-							<svg class="nav__link-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.58 31.84">
-								<g id="Layer_2" data-name="Layer 2">
-									<g id="Layer_1-2" data-name="Layer 1">
-										<path class=" "
-											d="M16.31.06a16.29,16.29,0,0,0-5.15,31.75c.81.15,1.11-.36,1.11-.79V28.25c-4.53,1-5.49-2.18-5.49-2.18A4.42,4.42,0,0,0,5,23.68c-1.47-1,.12-1,.12-1a3.46,3.46,0,0,1,2.49,1.68,3.48,3.48,0,0,0,4.72,1.37h0a3.4,3.4,0,0,1,1-2.18c-3.62-.41-7.42-1.81-7.42-8a6.26,6.26,0,0,1,1.67-4.37,5.89,5.89,0,0,1,.16-4.31s1.37-.44,4.48,1.67a15.48,15.48,0,0,1,8.16,0c3.11-2.11,4.47-1.67,4.47-1.67A5.89,5.89,0,0,1,25,11.12a6.35,6.35,0,0,1,1.67,4.37c0,6.26-3.81,7.63-7.44,8a3.89,3.89,0,0,1,1.11,3V31c0,.53.29.94,1.12.79A16.3,16.3,0,0,0,16.31,0Z" />
-									</g>
-								</g>
-								<image class="nav__link-image"></image>
+							<svg class="nav__link-image svg--white-fill" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+								viewBox="0 0 24 24">
+								<path class=" " fill="none" d="M0 0h24v24H0V0z" />
+								<path class=" "
+									d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+								<image class="nav__link-image svg--white-fill"></image>
 							</svg>
-							<span class="link-description">Github</span>
+							<span class="link-description">Contact</span>
 						</a>
 					</li>
-
-					<li class="nav__li">
+					<li class="nav__link-container">
 						<a href="" class="nav__link">
-							<svg class="nav__link-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.09 469.09">
-								<g id="Layer_2" data-name="Layer 2">
-									<g id="Layer_1-2" data-name="Layer 1">
-										<path class=" "
-											d="M234.55,0C105,0,0,105,0,234.55S105,469.09,234.55,469.09s234.54-105,234.54-234.54S364.09,0,234.55,0Zm0,430.58c-108.09,0-196-87.94-196-196s87.94-196,196-196,196,87.94,196,196S342.64,430.58,234.55,430.58Z" />
-										<path class=" "
-											d="M379.46,188.74c0-.19-.07-.36-.1-.54-.06-.36-.13-.71-.22-1s-.13-.4-.19-.6-.2-.61-.32-.91-.19-.41-.28-.61a8,8,0,0,0-.43-.82c-.11-.2-.23-.39-.35-.58s-.34-.52-.53-.76-.28-.37-.42-.54-.41-.46-.63-.67-.32-.34-.49-.49-.47-.41-.71-.6-.37-.29-.56-.42L374,180,241.46,91.62a12.47,12.47,0,0,0-13.83,0L95.07,180l-.2.16c-.2.13-.38.28-.56.42a8.32,8.32,0,0,0-.71.6,5.78,5.78,0,0,0-.5.49c-.22.21-.42.44-.62.67s-.29.36-.43.54-.36.5-.52.76-.25.38-.36.58-.29.54-.42.82-.2.4-.28.61-.22.6-.32.91-.14.39-.2.6-.15.69-.21,1c0,.18-.08.35-.1.54a10.84,10.84,0,0,0-.12,1.62v88.38a11.07,11.07,0,0,0,.12,1.63c0,.17.07.36.1.53.06.35.12.7.21,1.05s.13.4.2.6.2.61.32.92.18.4.28.6.27.56.42.83.23.38.36.57.34.51.52.76.28.36.43.54.4.46.62.67a5.78,5.78,0,0,0,.5.49,8.23,8.23,0,0,0,.71.59c.18.15.36.29.56.43s.13.11.2.15l132.56,88.38a12.44,12.44,0,0,0,13.83,0L374,289.1l.21-.15c.19-.14.38-.28.56-.43s.48-.38.71-.59.33-.32.49-.49.43-.44.63-.67.29-.35.42-.54.36-.5.53-.76.24-.38.35-.57a9.33,9.33,0,0,0,.43-.83l.28-.6c.12-.31.22-.61.32-.92s.14-.4.19-.6.16-.7.22-1.05c0-.17.08-.36.1-.53a12.63,12.63,0,0,0,.11-1.63V190.36A12.36,12.36,0,0,0,379.46,188.74ZM247,125.28l97.66,65.1-43.62,29.18-54-36.15Zm-24.93,0v58.13l-54,36.15-43.62-29.18ZM114.45,213.69l31.18,20.86-31.18,20.86ZM222.08,343.82l-97.65-65.1,43.62-29.17,54,36.14ZM234.55,264l-44.08-29.49,44.08-29.49,44.08,29.49ZM247,343.82V285.69l54-36.14,43.62,29.17Zm107.63-88.41-31.18-20.86,31.18-20.86Z" />
-									</g>
-								</g>
-								<image class="nav__link-image"></image>
-							</svg>
-							<span class="link-description">Codepen</span>
-						</a>
-					</li>
-
-					<li class="nav__li">
-						<a href="" class="nav__link">
-							<svg class="ct__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150.03 103.38">
+							<svg class="ct__logo nav__link-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150.03 103.38">
 								<defs>
 									<style>
 									</style>
@@ -74,34 +55,20 @@
 										<path d="M150,4.5,0,5" />
 									</g>
 								</g>
-								<image class="nav__link-image"></image>
+								<image class="nav__link-image svg--white-fill"></image>
 							</svg>
 							<span class="link-description">About</span>
 						</a>
 					</li>
-
-					<li class="nav__li">
+					<li class="nav__link-container">
 						<a href="" class="nav__link">
-							<svg class="nav__link-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-								viewBox="0 0 24 24">
-								<path class=" " fill="none" d="M0 0h24v24H0V0z" />
-								<path class=" "
-									d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
-								<image class="nav__link-image"></image>
-							</svg>
-							<span class="link-description">Contact</span>
-						</a>
-					</li>
-
-					<li class="nav__li">
-						<a href="" class="nav__link">
-							<svg class="nav__link-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+							<svg class="nav__link-image svg--white-fill" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 								viewBox="0 0 24 24">
 								<path class=" " fill="none" d="M0 0h24v24H0V0z" />
 								<path
 									d="M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z" />
 
-								<image class="nav__link-image"></image>
+								<image class="nav__link-image svg--white-fill"></image>
 							</svg>
 							<span class="link-description">Projects</span>
 						</a>
@@ -124,7 +91,7 @@
 		<main class="contact__form">
 			<fieldset>
 				<label class="contact__form-label" for="input__name">Name:</label>
-				<input type="text">
+				<input class="contact__form-input" type="text">
 				<label class="contact__form-label" for="input__email">Email:</label>
 				<input type="text">
 				<label class="contact__form-label" for="input__message">Message:</label>
@@ -229,6 +196,7 @@
 		</main>
 
 	</div>
+	<script src="/js/main-script.js"></script>
 </body>
 
 </html>
