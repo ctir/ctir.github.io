@@ -23,122 +23,92 @@
 
 <body>
 	<div class="page background">
-		<header class="nav__container nav__background">
-			<span class="name">CHARLES TIRIAMAI</span>
+		<header class="header__bg">
 			<nav id="top-nav" class="top-nav">
-				<ul class="nav__grid nav__link-list">
-
+				<a href="#about-section" class="nav__link">
+					<h1> CHARLES TIRIAMAI </h1>
+				</a>
+				<ul class="nav__link-list">
 					<li class="nav__link-container">
-						<a href="" class="nav__link">
-							<svg class="nav__link-image svg--white-fill" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-								viewBox="0 0 24 24">
-								<path class=" " fill="none" d="M0 0h24v24H0V0z" />
-								<path class=" "
-									d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
-								<image class="nav__link-image svg--white-fill"></image>
-							</svg>
-							<span class="link-description">Contact</span>
-						</a>
+						<a href="#contact-section" class="nav__link">Contact </a>
 					</li>
 					<li class="nav__link-container">
-						<a href="" class="nav__link">
-							<svg class="ct__logo nav__link-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150.03 103.38">
-								<defs>
-									<style>
-									</style>
-								</defs>
-								<title>ct-logo_2</title>
-								<g id="Layer_2" data-name="Layer 2">
-									<g id="Layer_1-2" data-name="Layer 1">
-										<path d="M76,7.88l-69.33,51L76,98.88Z" />
-										<path d="M76.51,7.88v0Z" />
-										<path d="M150,4.5,0,5" />
-									</g>
-								</g>
-								<image class="nav__link-image svg--white-fill"></image>
-							</svg>
-							<span class="link-description">About</span>
-						</a>
+						<a href="#about-section" class="nav__link">About </a>
 					</li>
 					<li class="nav__link-container">
-						<a href="" class="nav__link">
-							<svg class="nav__link-image svg--white-fill" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-								viewBox="0 0 24 24">
-								<path class=" " fill="none" d="M0 0h24v24H0V0z" />
-								<path
-									d="M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z" />
-
-								<image class="nav__link-image svg--white-fill"></image>
-							</svg>
-							<span class="link-description">Projects</span>
-						</a>
+						<a href="#project-section" class="nav__link">Projects </a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 
-		<main class="about__content">
-			<p class="about__text">Hi, I'm Charles!</p>
-			<p class="about__text">I make websites.</p>
+		<main id="about-section" class="about__content">
+			<h2 class="about__title">Hi, I'm Charles!</h2>
+			<h3 class="about__subtitle">I make websites.</h3>
 			<p class="about__text">The majority of my experience is in front end development. I have 
 				knowledge of some concepts of web design, SEO, web accessibility,  database design and SQL. I also have some
 				knowledge of Agile methodologies like Scrum.
 			</p>
 			<p class="about__text">Contributing to a more usable, secure and accessible Internet.</p>
-			<a href="" class="about__cv-link">View CV</a>
 		</main>
 
-		<main class="contact__form">
+		<main id="contact-section" class="contact__form">
 			<fieldset>
 				<label class="contact__form-label" for="input__name">Name:</label>
-				<input class="contact__form-input" type="text">
+				<input id="input__name" name="input__name" class="contact__form-input" type="text" aria-placeholder="Name:"
+					placeholder="Name:">
 				<label class="contact__form-label" for="input__email">Email:</label>
-				<input type="text">
+				<input id="input__email" name="input__email" type="email" aria-placeholder="Email:" placeholder="Email:">
 				<label class="contact__form-label" for="input__message">Message:</label>
-				<input type="text">
+				<input id="input__message" name="input__message" type="text" aria-placeholder="Message:" placeholder="Message:">
 				<input type="submit">
 			</fieldset>
 		</main>
-
+		<div id="project-section"></div>
 		<main class="project__content">
-			<figure>
-				<img src="/images/project-receta.jpg" alt="Receta preview image" class="project__preview">
+			<figure class="receta">
+				<h2 class="project__title">Receta</h2>
+				<img src="/images/receta-640w.jpg" srcset="/images/receta-640w.jpg 640w, /images/receta-1024w.jpg 1024w"
+					alt="Receta preview image" class="project__preview">
 				<figcaption>
-					<h2 class="project__title">Receta [ Flask / Hopscotch.js / virtualenv ]</h2>
-					<p class="project__description">Private family recipe site.</p>
+					<!--	<p class="project__description">Private family recipe site.</p>
 					<ul class="project__summary-list">
-						<li class="project__summary-list-item">- Installed/configured Python virtual environments [ ​virtualenv​
+						<li class="project__summary-list-item">Installed/configured Python virtual environments [ ​virtualenv​
 							].  </li>
-						<li class="project__summary-list-item">- Designed wireframes and mockups according to web design principles.
+						<li class="project__summary-list-item">Designed wireframes and mockups according to web design
+							principles.
 							[
-							​wireframe.cc​ / ​Justinmind​ ] </li>
-						<li class="project__summary-list-item">- Constructed layout for pages based on mockups [ ​Flask​ / JS / CSS3
+							​<a href="https://wireframe.cc/" target="__blank" class="tech-link">wireframe.cc​</a>​ / ​
+							Justinmind​ ] </li>
+						<li class="project__summary-list-item">Constructed layout for pages based on mockups [ ​Flask​ / JS /
+							CSS3
 							/ HTML5
 							]. </li>
-						<li class="project__summary-list-item">- Implemented page responsiveness through use of media queries. [
+						<li class="project__summary-list-item">Implemented page responsiveness through use of media queries. [
 							CSS3 ] </li>
-						<li class="project__summary-list-item">- Implemented coach marks for the main functionality of the site [
+						<li class="project__summary-list-item">Implemented coach marks for the main functionality of the site [
 							​Hopscotch.js​ ].  </li>
-						<li class="project__summary-list-item">- Implemented basic form validation [ JS ].  </li>
-						<li class="project__summary-list-item">- Created/executed Test Plan covering UAT, Usability and
-							Cross-browser
-							compatibility [ View ​Test Plan​ ]. </li>
+						<li class="project__summary-list-item">Implemented basic form validation [ JS ].  </li>
+						<li class="project__summary-list-item">Created/executed Test Plan covering UAT, Usability and	Cross-browser	compatibility 
+							[ View ​Test Plan​ ]. </li>
 						<li class="project__summary-list-item">- Generated incident reports for failed test cases and performed
 							regression
-							testing after incidents were  remedied [
-							View ​Incident
+							testing after incidents were  remedied [ View ​Incident
 							Report​ / ​Regression Test Doc​ ]</li>
-					</ul>
+					</ul>-->
 				</figcaption>
 			</figure>
 
-			<figure>
-				<img src="/images/project-testit.jpg" alt="TestIT preview image" class="project__preview">
+			<figure class="testit">
+				<h2 class="project__title">TestIT</h2>
+				<img src="/images/testit-640w.jpg" srcset="/images/testit-640w.jpg 640w, /images/testit-1024w.jpg 1024w"
+					alt="TestIT preview image" class="project__preview">
 				<figcaption>
-					<h2 class="project__title">TestIT [ DjangoCMS / virtualenv ]</h2>
+					<!--
 					<p class="project__description">Personal Informational site providing examples of basic test types.  </p>
 					<ul class="project__summary-list">
-						<li class="project__summary-list-item">- Installed/configured Python virtual environments [ ​virtualenv​ ].
+						<li class="project__summary-list-item">- Installed/configured Python virtual environments [ ​virtualenv​
+							].
 						</li>
 						<li class="project__summary-list-item">- Constructed layout for pages based on Wireframes and Mockups [
 							​DjangoCMS​ / JS / CSS3 / HTML5 ]. </li>
@@ -150,49 +120,46 @@
 						<li class="project__summary-list-item">- Created/executed Test Plan covering UAT, Usability and
 							Cross-browser compatibility [ ​Google Docs​ ]. 
 						</li>
-					</ul>
+					</ul>-->
 				</figcaption>
 			</figure>
 
-			<figure>
-				<img src="/images/project-gugo.jpg" alt="Gugo preview image" class="project__preview">
+			<figure class="gugo">
+				<h2 class="project__title">Gugo</h2>
+				<img src="/images/gugo-640w.jpg" srcset="/images/gugo-640w.jpg 640w, /images/gugo-1024w.jpg 1024w"
+					alt="Gugo preview image" class="project__preview">
 				<figcaption>
-					<h2 class="project__title">Gugo [ React / Responsive ] </h2>
+					<!--
 					<ul class="project__summary-list">
 						<li class="project__summary-list-item">
-							- Designed wireframes and mockups according to web design principles. [ ​wireframe.cc​ / ​Justinmind​ ]
+							Designed wireframes and mockups according to web design principles. 
+							[ ​<a href="https://wireframe.cc/" target="__blank" class="tech-link">wireframe.cc​</a>​ / ​Justinmind​ ]
 						</li>
-						<li class="project__summary-list-item">- Constructed
-							updating timer and button components. [ React ]</li>
-						<li class="project__summary-list-item">- Constructed layout for pages based on wireframes and mockups. [ JS
-							/
-							CSS3 / HTML5]</li>
+						<li class="project__summary-list-item">
+							Constructed updating timer and button components. [ React ]</li>
+						<li class="project__summary-list-item">
+							Constructed layout for pages based on wireframes and mockups. [ JS / CSS3 / HTML5]</li>
 						<li class="project__summary-list-item">- Implemented page responsiveness through use of media queries. [
 							CSS3 ]</li>
 					</ul>    
+					-->
 				</figcaption>
 			</figure>
 
 			<figure>
-				<img src="/images/project-learnit.jpg" alt="LearnIT preview image" class="project__preview">
+				<h2 class="project__title">LearnIT</h2>
+				<img src="/images/learnit-640w.jpg" srcset="/images/learnit-640w.jpg 640w, /images/learnit-1024w.jpg 1024w"
+					alt="LearnIT preview image" class="project__preview">
 				<figcaption>
-					<h2 class="project__title">LearnIT</h2>
 					<p class="project__description"></p>
 					<ul class="project__summary-list">
-						<li class="project__summary-list-item">- Designed wireframes according to web design principles. [
-							​wireframe.cc​ ] </li>
-						<li class="project__summary-list-item">- Constructed layout for pages based on
-							Wireframes [CSS3 / HTML5].</li>
+						<li class="project__summary-list-item">Designed wireframes according to web design principles.
+							[ <a href="https://wireframe.cc/" target="__blank" class="tech-link">wireframe.cc​</a> ]
+						</li>
+						<li class="project__summary-list-item">Constructed layout for pages based on Wireframes [CSS3 / HTML5].</li>
 					</ul>
 				</figcaption>
 			</figure>
-
-			<span class="project__nav">
-				<div class="project__nav--circle"></div>
-				<div class="project__nav--circle"></div>
-				<div class="project__nav--circle"></div>
-				<div class="project__nav--circle"></div>
-			</span>
 		</main>
 
 	</div>
