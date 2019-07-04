@@ -23,17 +23,17 @@
 
 <body>
 	<div class="page background">
-		<header class="header__bg">
+		<header id="header-section" class="header__bg">
 			<nav id="top-nav" class="top-nav">
 				<a href="#about-section" class="nav__link">
 					<h1> CHARLES TIRIAMAI </h1>
 				</a>
 				<ul class="nav__link-list">
 					<li class="nav__link-container">
-						<a href="#contact-section" class="nav__link">Contact </a>
+						<a href="#about-section" class="nav__link">About </a>
 					</li>
 					<li class="nav__link-container">
-						<a href="#about-section" class="nav__link">About </a>
+						<a href="#contact-section" class="nav__link">Contact </a>
 					</li>
 					<li class="nav__link-container">
 						<a href="#project-section" class="nav__link">Projects </a>
@@ -42,127 +42,86 @@
 			</nav>
 		</header>
 
+
 		<main id="about-section" class="about__content">
-			<h2 class="about__title">Hi, I'm Charles!</h2>
-			<h3 class="about__subtitle">I make websites.</h3>
-			<p class="about__text">The majority of my experience is in front end development. I have 
-				knowledge of some concepts of web design, SEO, web accessibility,  database design and SQL. I also have some
-				knowledge of Agile methodologies like Scrum.
+			<h2 class="section-title">About</h2>
+			<h3 class="about__title">Hi, I'm Charles! I make websites.</h3>
+			<p class="about__text"></p>
+			<p class="about__text">
+				The majority of my experience is in front end development. I have 
+				knowledge of some concepts of web design, SEO, web accessibility,
+				database design and SQL. I also have some knowledge of Agile 
+				methodologies like Scrum.
 			</p>
 			<p class="about__text">Contributing to a more usable, secure and accessible Internet.</p>
 		</main>
 
 		<main id="contact-section" class="contact__form">
+			<h2 class="section-title">Contact</h2>
 			<fieldset>
 				<label class="contact__form-label" for="input__name">Name:</label>
-				<input id="input__name" name="input__name" class="contact__form-input" type="text" aria-placeholder="Name:"
-					placeholder="Name:">
+				<input id="input__name" name="input__name" class="contact__form-input" type="text"
+					aria-placeholder="Enter your name here..." placeholder="Enter your name here...">
 				<label class="contact__form-label" for="input__email">Email:</label>
-				<input id="input__email" name="input__email" type="email" aria-placeholder="Email:" placeholder="Email:">
+				<input id="input__email" name="input__email" type="email" aria-placeholder="Enter your email here..."
+					placeholder="Enter your email here...">
 				<label class="contact__form-label" for="input__message">Message:</label>
-				<input id="input__message" name="input__message" type="text" aria-placeholder="Message:" placeholder="Message:">
+				<input id="input__message" name="input__message" type="text" aria-placeholder="Enter your message here..."
+					placeholder="Enter your message here...">
 				<input type="submit">
 			</fieldset>
 		</main>
-		<div id="project-section"></div>
-		<main class="project__content">
+
+		<main id="project-section" class="project__content">
+			<h2 class="section-title">Projects</h2>
 			<figure class="receta">
-				<h2 class="project__title">Receta</h2>
+				<h3 class="project__title">Receta</h3>
+				<!--<figcaption>
+					<p class="project__description">Private family recipe site.</p>
+				</figcaption>-->
 				<img src="/images/receta-640w.jpg" srcset="/images/receta-640w.jpg 640w, /images/receta-1024w.jpg 1024w"
 					alt="Receta preview image" class="project__preview">
-				<figcaption>
-					<!--	<p class="project__description">Private family recipe site.</p>
-					<ul class="project__summary-list">
-						<li class="project__summary-list-item">Installed/configured Python virtual environments [ ​virtualenv​
-							].  </li>
-						<li class="project__summary-list-item">Designed wireframes and mockups according to web design
-							principles.
-							[
-							​<a href="https://wireframe.cc/" target="__blank" class="tech-link">wireframe.cc​</a>​ / ​
-							Justinmind​ ] </li>
-						<li class="project__summary-list-item">Constructed layout for pages based on mockups [ ​Flask​ / JS /
-							CSS3
-							/ HTML5
-							]. </li>
-						<li class="project__summary-list-item">Implemented page responsiveness through use of media queries. [
-							CSS3 ] </li>
-						<li class="project__summary-list-item">Implemented coach marks for the main functionality of the site [
-							​Hopscotch.js​ ].  </li>
-						<li class="project__summary-list-item">Implemented basic form validation [ JS ].  </li>
-						<li class="project__summary-list-item">Created/executed Test Plan covering UAT, Usability and	Cross-browser	compatibility 
-							[ View ​Test Plan​ ]. </li>
-						<li class="project__summary-list-item">- Generated incident reports for failed test cases and performed
-							regression
-							testing after incidents were  remedied [ View ​Incident
-							Report​ / ​Regression Test Doc​ ]</li>
-					</ul>-->
-				</figcaption>
 			</figure>
 
 			<figure class="testit">
-				<h2 class="project__title">TestIT</h2>
+				<h3 class="project__title">TestIT</h3>
+				<!--<figcaption>
+					<p class="project__description">
+						Personal Informational site providing examples of basic test types.
+					</p>
+				</figcaption>-->
 				<img src="/images/testit-640w.jpg" srcset="/images/testit-640w.jpg 640w, /images/testit-1024w.jpg 1024w"
 					alt="TestIT preview image" class="project__preview">
-				<figcaption>
-					<!--
-					<p class="project__description">Personal Informational site providing examples of basic test types.  </p>
-					<ul class="project__summary-list">
-						<li class="project__summary-list-item">- Installed/configured Python virtual environments [ ​virtualenv​
-							].
-						</li>
-						<li class="project__summary-list-item">- Constructed layout for pages based on Wireframes and Mockups [
-							​DjangoCMS​ / JS / CSS3 / HTML5 ]. </li>
-						<li class="project__summary-list-item">- Implemented page responsiveness through use of media queries. [
-							CSS3 ] </li>
-						<li class="project__summary-list-item">- Implemented admin and general user profiles/permissions [
-							​DjangoCMS​ ].  </li>
-						<li class="project__summary-list-item">- Integrated plugins [ ​DjangoCMS​ ]. </li>
-						<li class="project__summary-list-item">- Created/executed Test Plan covering UAT, Usability and
-							Cross-browser compatibility [ ​Google Docs​ ]. 
-						</li>
-					</ul>-->
-				</figcaption>
 			</figure>
 
 			<figure class="gugo">
-				<h2 class="project__title">Gugo</h2>
+				<h3 class="project__title">Gugo</h3>
+				<!--<figcaption>
+					<p class="project__description">
+						Private forum site for the brain injury community.
+					</p>
+				</figcaption>-->
 				<img src="/images/gugo-640w.jpg" srcset="/images/gugo-640w.jpg 640w, /images/gugo-1024w.jpg 1024w"
 					alt="Gugo preview image" class="project__preview">
-				<figcaption>
-					<!--
-					<ul class="project__summary-list">
-						<li class="project__summary-list-item">
-							Designed wireframes and mockups according to web design principles. 
-							[ ​<a href="https://wireframe.cc/" target="__blank" class="tech-link">wireframe.cc​</a>​ / ​Justinmind​ ]
-						</li>
-						<li class="project__summary-list-item">
-							Constructed updating timer and button components. [ React ]</li>
-						<li class="project__summary-list-item">
-							Constructed layout for pages based on wireframes and mockups. [ JS / CSS3 / HTML5]</li>
-						<li class="project__summary-list-item">- Implemented page responsiveness through use of media queries. [
-							CSS3 ]</li>
-					</ul>    
-					-->
-				</figcaption>
 			</figure>
 
 			<figure>
-				<h2 class="project__title">LearnIT</h2>
+				<h3 class="project__title">LearnIT</h3>
+				<!--<figcaption>
+					<p class="project__description">
+						Personal Informational site providing examples of basic test types.
+					</p>
+				</figcaption>-->
 				<img src="/images/learnit-640w.jpg" srcset="/images/learnit-640w.jpg 640w, /images/learnit-1024w.jpg 1024w"
 					alt="LearnIT preview image" class="project__preview">
-				<figcaption>
-					<p class="project__description"></p>
-					<ul class="project__summary-list">
-						<li class="project__summary-list-item">Designed wireframes according to web design principles.
-							[ <a href="https://wireframe.cc/" target="__blank" class="tech-link">wireframe.cc​</a> ]
-						</li>
-						<li class="project__summary-list-item">Constructed layout for pages based on Wireframes [CSS3 / HTML5].</li>
-					</ul>
-				</figcaption>
 			</figure>
 		</main>
 
+		<a href="#header-section" class="return-link">
+			<h4>Return to top</h4>
+		</a>
 	</div>
+
 	<script src="/js/main-script.js"></script>
 </body>
 

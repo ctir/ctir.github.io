@@ -1,16 +1,22 @@
 // main-style.scss
 
 // Variables
-$base-color: #000000;
-$primary-color: #003282;
-$secondary-color: #0344aa;
-$accent-color: #33aa99;
-$bg-color: #B9D6F2;
+$primary-color: #666666;
+$secondary-color: #333333;
+$accent-color: #FF8811;
+$bg-color: #4C86A8;
+
+$primary-font: Arial, Helvetica, sans-serif;
+
+$border: 1px solid $accent-color;
+$input-border: 1px solid $bg-color;
 
 $full-width: 100%;
-$huge: 40px;
-$large: 15px;
-$small: 10px;
+$huge: 1.2em;
+$large: 1.0em;
+$medium: 0.9em;
+$small: 0.75em;
+$tiny: 0.6em;
 
 @mixin reset{
 	padding: 0;	margin: 0;	border: 0;
@@ -24,20 +30,20 @@ $small: 10px;
 @mixin fill-viewport{
 	width: 100%;
 	min-width: 100%;
-	height: 100%;
-	min-height: 100%;
 }
 
 @mixin transition($duration) {  
-		-moz-transition: ease $duration;
-		-webkit-transition: ease $duration;
-		-o-transition: ease $duration;
-		transition: ease $duration;
+	-moz-transition: ease $duration;
+	-webkit-transition: ease $duration;
+	-o-transition: ease $duration;
+	transition: ease $duration;
 }
 
-@mixin align($center){	
-	margin: auto;
-	text-align: center;
+@mixin center{	
+		width: 85%;
+		max-width: 720px;
+		margin-right: auto; margin-left: auto;
+		text-align: center;
 }
 
 @mixin hoverable-nav($hovering) {
@@ -48,17 +54,15 @@ $small: 10px;
 		color: $secondary-color;
 		background-color: $bg-color;		
 	}	
-
 	@include transition(0.1s);
 }
 
 @mixin hoverable($hovering) {
 	@if $hovering{
-		color: $accent-color;
+		color: $bg-color;
 	}	 @else{		
 		color: $secondary-color;
 	}	
-
 	@include transition(0.1s);
 }
 
@@ -66,14 +70,23 @@ html, body, .page {
 	@include reset;
 	@include fill-viewport;
 	font-size: 18px;	
-	font-family: Arial, Helvetica, sans-serif;
-	color: #000;
+	font-family: $primary-font;
+	color: $primary-color;
+}
+
+.return-link{
+	position: relative;
+	bottom: $huge;
+	right: $small;
+	width: $large;
 }
 
 main{
-	padding: $huge 0 $huge 0;
+	padding: $small 0;
+	margin: $large 0;
 }
-h1, h2, h3 {
+
+h2, h3, h4 {
 	text-align: center;
 }
 
@@ -91,13 +104,18 @@ p{
 	text-align: center;
 }
 
+.section-title{
+	margin: 0 $huge;
+	padding-bottom: $small;
+	border-bottom: $border;
+}
+
 /* Header */
 
 header {
 	
 	h1 {
 		@include reset;
-		padding: $small;
 	}
 
 	ul, li, a {
@@ -105,14 +123,13 @@ header {
 		display: block;
 		text-align: center;
 	}
-
+	
 	.nav__link {
-		padding: $small;
+		padding: $medium;
 		@include hoverable-nav(false);
 	}
 
 	.nav__link:hover {
-		padding: $small;
 		@include hoverable-nav(true);
 	}
 	.nav__container {
@@ -128,32 +145,65 @@ header {
 
 }
 
-
-
-fieldset {
-	border: none;
-	
-	label {
-		font-size: 0.9em;
-		display: none;
-	}
-
-	input {
-		display: block;
-		width: 100%;
-		padding: $small;
-		box-sizing: border-box;
-		margin-bottom: $small;
+.about__content{
+	.about__text{
+		@include center;
 	}
 }
 
+.contact__form{
+	fieldset {
+		@include center;
+		text-align: left;
+		margin: $large auto;
+		border: none;
+		font-size: 0.9em;
+		
+		label {
+			display: block;
+			margin: $small 0;
+		}
+
+		input {
+			@include reset;
+			@include hoverable(false);
+			border: $input-border;
+			width: $full-width;
+			padding: $small;
+			margin-bottom: $small;
+		}
+
+		input:hover{
+			@include hoverable(true);
+			border: $border;
+		}
+
+		input[type=submit]{
+			@include hoverable-nav(false);
+			padding: $large;
+			margin-top: $medium;
+			border-radius: $small;
+			font-size: 1.2em;
+		}
+		
+		input[type=submit]:hover{
+			@include hoverable-nav(true);
+		}
+	}
+}
 
 /* Projects */
-
-.project__preview{
-	@include reset;
-	width: 100%;
-	max-width: 1024px;
+.project__content{
+	.project__preview{
+		@include reset;
+		@include center;
+		border: $border;
+		width: 100%;
+		max-width: 1024px;
+	}
+	.project__title{
+		margin: $tiny;
+	}
 }
 
 @media screen and (min-width: 500px) {

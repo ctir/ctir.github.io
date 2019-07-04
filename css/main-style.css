@@ -9,25 +9,31 @@ html, body, .page {
   box-sizing: border-box;
   width: 100%;
   min-width: 100%;
-  height: 100%;
-  min-height: 100%;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #000;
+  color: #666666;
+}
+
+.return-link {
+  position: relative;
+  bottom: 1.2em;
+  right: 0.75em;
+  width: 1em;
 }
 
 main {
-  padding: 40px 0 40px 0;
+  padding: 0.75em 0;
+  margin: 1em 0;
 }
 
-h1, h2, h3 {
+h2, h3, h4 {
   text-align: center;
 }
 
 a {
   font-size: 1.1em;
   text-align: center;
-  color: #0344aa;
+  color: #333333;
   -moz-transition: ease 0.1s;
   -webkit-transition: ease 0.1s;
   -o-transition: ease 0.1s;
@@ -35,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: #33aa99;
+  color: #4C86A8;
   -moz-transition: ease 0.1s;
   -webkit-transition: ease 0.1s;
   -o-transition: ease 0.1s;
@@ -44,6 +50,12 @@ a:hover {
 
 p {
   text-align: center;
+}
+
+.section-title {
+  margin: 0 1.2em;
+  padding-bottom: 0.75em;
+  border-bottom: 1px solid #FF8811;
 }
 
 /* Header */
@@ -56,7 +68,6 @@ header h1 {
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px;
 }
 header ul, header li, header a {
   padding: 0;
@@ -71,18 +82,17 @@ header ul, header li, header a {
   text-align: center;
 }
 header .nav__link {
-  padding: 10px;
-  color: #0344aa;
-  background-color: #B9D6F2;
+  padding: 0.9em;
+  color: #333333;
+  background-color: #4C86A8;
   -moz-transition: ease 0.1s;
   -webkit-transition: ease 0.1s;
   -o-transition: ease 0.1s;
   transition: ease 0.1s;
 }
 header .nav__link:hover {
-  padding: 10px;
-  color: #B9D6F2;
-  background-color: #0344aa;
+  color: #4C86A8;
+  background-color: #333333;
   -moz-transition: ease 0.1s;
   -webkit-transition: ease 0.1s;
   -o-transition: ease 0.1s;
@@ -98,23 +108,30 @@ header .top-nav--fixed {
   width: 100%;
 }
 
-fieldset {
-  border: none;
-}
-fieldset label {
-  font-size: 0.9em;
-  display: none;
-}
-fieldset input {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+.about__content .about__text {
+  width: 85%;
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
-/* Projects */
-.project__preview {
+.contact__form fieldset {
+  width: 85%;
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  text-align: left;
+  margin: 1em auto;
+  border: none;
+  font-size: 0.9em;
+}
+.contact__form fieldset label {
+  display: block;
+  margin: 0.75em 0;
+}
+.contact__form fieldset input {
   padding: 0;
   margin: 0;
   border: 0;
@@ -123,8 +140,66 @@ fieldset input {
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+  color: #333333;
+  -moz-transition: ease 0.1s;
+  -webkit-transition: ease 0.1s;
+  -o-transition: ease 0.1s;
+  transition: ease 0.1s;
+  border: 1px solid #4C86A8;
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 0.75em;
+}
+.contact__form fieldset input:hover {
+  color: #4C86A8;
+  -moz-transition: ease 0.1s;
+  -webkit-transition: ease 0.1s;
+  -o-transition: ease 0.1s;
+  transition: ease 0.1s;
+  border: 1px solid #FF8811;
+}
+.contact__form fieldset input[type=submit] {
+  color: #333333;
+  background-color: #4C86A8;
+  -moz-transition: ease 0.1s;
+  -webkit-transition: ease 0.1s;
+  -o-transition: ease 0.1s;
+  transition: ease 0.1s;
+  padding: 1em;
+  margin-top: 0.9em;
+  border-radius: 0.75em;
+  font-size: 1.2em;
+}
+.contact__form fieldset input[type=submit]:hover {
+  color: #4C86A8;
+  background-color: #333333;
+  -moz-transition: ease 0.1s;
+  -webkit-transition: ease 0.1s;
+  -o-transition: ease 0.1s;
+  transition: ease 0.1s;
+}
+
+/* Projects */
+.project__content .project__preview {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 85%;
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  border: 1px solid #FF8811;
   width: 100%;
   max-width: 1024px;
+}
+.project__content .project__title {
+  margin: 0.6em;
 }
 
 /*# sourceMappingURL=main-style.css.map */
