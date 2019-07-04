@@ -91,7 +91,7 @@ h2, h3, h4 {
 }
 
 a {
-	font-size: 1.1em;
+	font-size: $large;
 	text-align: center;
 	@include hoverable(false);
 }
@@ -169,7 +169,7 @@ header {
 			@include hoverable(false);
 			border: $input-border;
 			width: $full-width;
-			padding: $small;
+			padding: $large;
 			margin-bottom: $small;
 		}
 

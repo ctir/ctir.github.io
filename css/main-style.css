@@ -31,7 +31,7 @@ h2, h3, h4 {
 }
 
 a {
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: center;
   color: #333333;
   -moz-transition: ease 0.1s;
@@ -147,7 +147,7 @@ header .top-nav--fixed {
   transition: ease 0.1s;
   border: 1px solid #4C86A8;
   width: 100%;
-  padding: 0.75em;
+  padding: 1em;
   margin-bottom: 0.75em;
 }
 .contact__form fieldset input:hover {
