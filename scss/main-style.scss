@@ -12,9 +12,9 @@ $border: 1px solid $accent-color;
 $input-border: 1px solid $bg-color;
 
 $full-width: 100%;
-$huge: 1.2em;
+$huge: 5em;
 $large: 1.0em;
-$medium: 0.9em;
+$medium: 0.8em;
 $small: 0.75em;
 $tiny: 0.6em;
 
@@ -46,22 +46,33 @@ $tiny: 0.6em;
 		text-align: center;
 }
 
-@mixin hoverable-nav($hovering) {
+@mixin secondary-hov($hovering) {
 	@if $hovering{
 		color: $bg-color;
-		background-color: $secondary-color;		
 	}	 @else{		
 		color: $secondary-color;
-		background-color: $bg-color;		
 	}	
 	@include transition(0.1s);
 }
 
-@mixin hoverable($hovering) {
+@mixin primary-hov($hovering) {
+	@include secondary-hov($hovering);
 	@if $hovering{
-		color: $bg-color;
+		background-color: $secondary-color;		
+	}	 @else{		
+		background-color: $bg-color;		
+	}	
+}
+
+
+
+@mixin tertiary-hov($hovering) {
+	@if $hovering{
+		color: $accent-color;
+		background-color: $secondary-color;		
 	}	 @else{		
 		color: $secondary-color;
+		background-color: $accent-color;		
 	}	
 	@include transition(0.1s);
 }
@@ -83,7 +94,7 @@ html, body, .page {
 
 main{
 	padding: $small 0;
-	margin: $large 0;
+	margin: $large 0 $huge 0;
 }
 
 h2, h3, h4 {
@@ -93,11 +104,11 @@ h2, h3, h4 {
 a {
 	font-size: $large;
 	text-align: center;
-	@include hoverable(false);
+	@include secondary-hov(false);
 }
 
 a:hover {
-	@include hoverable(true);
+	@include secondary-hov(true);
 }
 
 p{
@@ -126,11 +137,11 @@ header {
 	
 	.nav__link {
 		padding: $medium;
-		@include hoverable-nav(false);
+		@include primary-hov(false);
 	}
 
 	.nav__link:hover {
-		@include hoverable-nav(true);
+		@include primary-hov(true);
 	}
 	.nav__container {
 		width: 100%;
@@ -161,25 +172,30 @@ header {
 		
 		label {
 			display: block;
-			margin: $small 0;
+			margin: $large 0 0.2em 0;
 		}
 
-		input {
+		input, textarea {
 			@include reset;
-			@include hoverable(false);
+			@include secondary-hov(false);
 			border: $input-border;
 			width: $full-width;
 			padding: $large;
 			margin-bottom: $small;
 		}
 
-		input:hover{
-			@include hoverable(true);
+		textarea{
+			height: 150px;
+			font-family: $primary-font;
+		}
+
+		input:hover, textarea:hover{
+			@include secondary-hov(true);
 			border: $border;
 		}
 
 		input[type=submit]{
-			@include hoverable-nav(false);
+			@include primary-hov(false);
 			padding: $large;
 			margin-top: $medium;
 			border-radius: $small;
@@ -187,7 +203,7 @@ header {
 		}
 		
 		input[type=submit]:hover{
-			@include hoverable-nav(true);
+			@include primary-hov(true);
 		}
 	}
 }
