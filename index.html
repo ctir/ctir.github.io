@@ -4,6 +4,13 @@
 <html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Charles Tiriamai is a Web Developer dedicated to crafting 
+		usable, secure and SEO friendly software. " />
+	<title>Charles Tiriamai | Web Developer</title>
+
 	<!-- https://realfavicongenerator.net/favicon_result?file_id=p1dd3c2t811lafir1b3b4i9175e6#.XP-u4IgzZhE -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
@@ -14,35 +21,35 @@
 	<meta name="msapplication-TileImage" content="/images/favicon/mstile-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<!-- End realfavicongenerator tags -->
+
 	<link rel="stylesheet" type="text/css" href="/css/main-style.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Charles Tiriamai | Web Developer</title>
 </head>
 
 <body>
 	<div class="page background">
-		<header id="header-section" class="header__bg">
+		<a id="top"></a>
+		<header class="header__bg">
 			<nav id="top-nav" class="top-nav">
-				<a href="#about-section" class="nav__link">
-					<h1> CHARLES TIRIAMAI </h1>
-				</a>
 				<ul class="nav__link-list">
 					<li class="nav__link-container">
-						<a href="#about-section" class="nav__link">About </a>
+						<a href="#top" title="Return to the top of the page" class="nav__link">
+							<h1> CHARLES TIRIAMAI </h1>
+						</a>
 					</li>
 					<li class="nav__link-container">
-						<a href="#contact-section" class="nav__link">Contact </a>
+						<a href="#about-section" title="Learn more about Me" class="nav__link">About Me</a>
 					</li>
 					<li class="nav__link-container">
-						<a href="#project-section" class="nav__link">Projects </a>
+						<a href="#contact-section" title="Send Me a message" class="nav__link">Contact Us</a>
+					</li>
+					<li class="nav__link-container">
+						<a href="#project-section" title="View some of my projects" class="nav__link">Projects </a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 
-
+		<!---->
 		<main id="about-section" class="about__content">
 			<h2 class="section-title">About</h2>
 			<h3 class="about__title">Hi, I'm Charles! I make websites.</h3>
@@ -57,19 +64,23 @@
 		</main>
 
 		<main id="contact-section" class="contact__form">
-			<h2 class="section-title">Contact</h2>
+			<h2 class="section-title">Contact Me</h2>
 			<form action="" class="contact-form">
+				<h3>All fields are required!</h3>
 				<fieldset>
-					<label class="contact__form-label" for="input__name">Name:</label>
-					<input id="input__name" name="input__name" class="contact__form-input" type="text"
-						aria-placeholder="Enter your name here..." placeholder="Enter your name here...">
-					<label class="contact__form-label" for="input__email">Email:</label>
-					<input id="input__email" name="input__email" type="email" aria-placeholder="Enter your email here..."
-						placeholder="Enter your email here...">
-					<label class="contact__form-label" for="input__message">Message:</label>
+					<label class="contact__form-label" for="input__name">Name:* <span class="error-msg">A name must be
+							provided</span></label>
+					<input type="text" id="input__name" name="input__name" class="contact__form-input"
+						aria-placeholder="Enter your name here..." placeholder="Enter your name here..." aria-required required>
+					<label class="contact__form-label" for="input__email">Email:* <span class="error-msg">A valid email is
+							required</span></label>
+					<input type="email" id="input__email" name="input__email" aria-placeholder="Enter your email here..."
+						placeholder="Enter your email here..." aria-required required>
+					<label class="contact__form-label" for="input__message">Message:* <span class="error-msg">This field must not
+							be empty</span></label>
 					<textarea id="input__message" name="input__message" aria-placeholder="Enter your message here..."
-						placeholder="Enter your message here..."></textarea>
-					<input type="submit">
+						placeholder="Enter your message here..." aria-required required></textarea>
+					<button type="submit" class="submit-btn">Submit</button>
 				</fieldset>
 			</form>
 		</main>
@@ -119,11 +130,17 @@
 			</figure>
 		</main>
 
-		<a href="#header-section" class="return-link">
+		<a href="#top" title="Return to the top of the page" class="return-link">
 			<h4>Return to top</h4>
 		</a>
 	</div>
 
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_HnsR3a9GzWQawK2xcazqw");
+		})();
+	</script>
 	<script src="/js/main-script.js"></script>
 </body>
 

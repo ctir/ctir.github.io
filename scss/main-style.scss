@@ -1,10 +1,11 @@
 // main-style.scss
 
 // Variables
-$primary-color: #666666;
-$secondary-color: #333333;
+$primary-color: #333333;
+$secondary-color: #666666;
 $accent-color: #FF8811;
 $bg-color: #4C86A8;
+$focus-color: #eeeeee;
 
 $primary-font: Arial, Helvetica, sans-serif;
 
@@ -16,7 +17,7 @@ $huge: 5em;
 $large: 1.0em;
 $medium: 0.8em;
 $small: 0.75em;
-$tiny: 0.6em;
+$tiny: 0.2em;
 
 @mixin reset{
 	padding: 0;	margin: 0;	border: 0;
@@ -46,35 +47,37 @@ $tiny: 0.6em;
 		text-align: center;
 }
 
-@mixin secondary-hov($hovering) {
+@mixin mobile-menu-hover($hovering){
 	@if $hovering{
-		color: $bg-color;
+		background-color: $primary-color;		
+		color: $focus-color;
 	}	 @else{		
-		color: $secondary-color;
-	}	
-	@include transition(0.1s);
+		color: $primary-color;
+		background-color: $bg-color;		
+	}
+	@include transition(0.2s);
 }
 
-@mixin primary-hov($hovering) {
-	@include secondary-hov($hovering);
+@mixin desktop-menu-hover($hovering){
 	@if $hovering{
-		background-color: $secondary-color;		
+		background-color: $bg-color;		
+		color: $focus-color;
+		text-decoration: underline;
 	}	 @else{		
 		background-color: $bg-color;		
-	}	
+		color: $primary-color;
+	}
+	@include transition(0.2s);
 }
 
-
-
-@mixin tertiary-hov($hovering) {
+@mixin input-hover($hovering){
 	@if $hovering{
 		color: $accent-color;
-		background-color: $secondary-color;		
-	}	 @else{		
-		color: $secondary-color;
-		background-color: $accent-color;		
-	}	
-	@include transition(0.1s);
+		background-color: $secondary-color;
+	}
+	@else{
+		color: $primary
+	}
 }
 
 html, body, .page {
@@ -97,6 +100,10 @@ main{
 	margin: $large 0 $huge 0;
 }
 
+.about__content{
+	margin-top: 255px;
+}
+
 h2, h3, h4 {
 	text-align: center;
 }
@@ -104,11 +111,9 @@ h2, h3, h4 {
 a {
 	font-size: $large;
 	text-align: center;
-	@include secondary-hov(false);
 }
 
 a:hover {
-	@include secondary-hov(true);
 }
 
 p{
@@ -116,7 +121,8 @@ p{
 }
 
 .section-title{
-	margin: 0 $huge;
+	margin: 0 auto;
+	max-width: 720px;
 	padding-bottom: $small;
 	border-bottom: $border;
 }
@@ -124,36 +130,34 @@ p{
 /* Header */
 
 header {
-	
-	h1 {
+	width: 100%;
+	background-color: $bg-color;
+	display: block;
+		position: fixed;
+		top: 0; 
+	h1, ul, li, a {
 		@include reset;
 	}
 
-	ul, li, a {
-		@include reset;
+	li, a {
 		display: block;
 		text-align: center;
+		line-height: 30px;
 	}
 	
 	.nav__link {
 		padding: $medium;
-		@include primary-hov(false);
+		@include mobile-menu-hover(false);
 	}
 
 	.nav__link:hover {
-		@include primary-hov(true);
+		@include mobile-menu-hover(true);
 	}
+
 	.nav__container {
 		width: 100%;
 		min-width: 100%;
 	}
-
-	.top-nav--fixed {
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
-
 }
 
 .about__content{
@@ -177,7 +181,6 @@ header {
 
 		input, textarea {
 			@include reset;
-			@include secondary-hov(false);
 			border: $input-border;
 			width: $full-width;
 			padding: $large;
@@ -190,20 +193,19 @@ header {
 		}
 
 		input:hover, textarea:hover{
-			@include secondary-hov(true);
 			border: $border;
 		}
 
-		input[type=submit]{
-			@include primary-hov(false);
+		.submit-btn{
+			display: block;
+			width: 100%;
 			padding: $large;
 			margin-top: $medium;
 			border-radius: $small;
 			font-size: 1.2em;
 		}
 		
-		input[type=submit]:hover{
-			@include primary-hov(true);
+		.submit-btn:hover{
 		}
 	}
 }
@@ -222,8 +224,39 @@ header {
 	}
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px){
 	
 }
+
+@media screen and (min-width: 705px) {
+
+	header {
+		ul{
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
+			li{
+				display: inline;		
+				a{
+					display: inline-block;
+				}
+			}
+			.nav__link{
+				@include desktop-menu-hover(false);
+			}
+			
+			.nav__link:hover{
+				@include desktop-menu-hover(true);
+			}
+			}
+	}
+
+	main, .about__content{
+		margin-top: $huge;
+	}
+
+
+}
+	
 
 @media screen and (min-width: 900px) {}
