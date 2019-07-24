@@ -1,14 +1,19 @@
 //Author: Charles Tiriamai
 
-//window.onscroll = function () { attachNavbar() };
+function sendEmail() {
+	var name = document.querySelector("#input__name");
+	var email = document.querySelector("#input__email");
+	var msg = document.querySelector("#input__msg");
+	var testStr = "name: " + name + "; email: " + email + "; msg: " + msg;
+	alert(testStr);
 
-function attachNavbar() {
-  var navbar = document.querySelector(".top-nav");
-  var sticky = navbar.offsetTop;
-
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("top-nav--fixed")
-  } else {
-    navbar.classList.remove("top-nav--fixed");
-  }
+	var service_id = 'my_mandrill';
+	var template_id = 'feedback';
+	var template_params = {
+		name: 'John',
+		reply_email: 'john@doe.com',
+		message: 'This is awesome!'
+	};
 }
+
+emailjs.send(service_id, template_id, template_params);

@@ -11,6 +11,8 @@ $primary-font: Arial, Helvetica, sans-serif;
 
 $border: 1px solid $accent-color;
 $input-border: 1px solid $bg-color;
+$btn-border: 1px solid $accent-color;
+
 
 $full-width: 100%;
 $huge: 5em;
@@ -62,7 +64,6 @@ $tiny: 0.2em;
 	@if $hovering{
 		background-color: $bg-color;		
 		color: $focus-color;
-		text-decoration: underline;
 	}	 @else{		
 		background-color: $bg-color;		
 		color: $primary-color;
@@ -72,12 +73,43 @@ $tiny: 0.2em;
 
 @mixin input-hover($hovering){
 	@if $hovering{
+		outline: none;
 		color: $accent-color;
-		background-color: $secondary-color;
+		border: 2px solid $accent-color;
+		background-color: #ffffff;
 	}
 	@else{
-		color: $primary
+		color: $primary-color;
+		border: 2px solid $bg-color;
+		background-color: $focus-color;
 	}
+	@include transition(0.2s);
+}
+
+@mixin btn-hover($hovering){
+	@if $hovering{
+		background-color: $primary-color;
+		border: 5px solid $accent-color;
+		color: $accent-color;
+	}@else {
+		background-color: $accent-color;
+		border: 5px solid $primary-color;
+		color: $primary-color;
+	}
+	@include transition(0.2s);
+}
+
+@mixin box-shadow($hovering){
+	@if($hovering){
+		-webkit-box-shadow: 12px 12px 15px -10px rgba(0,0,0,0.36);
+		-moz-box-shadow: 12px 12px 15px -10px rgba(0,0,0,0.36);
+		box-shadow: 12px 12px 15px -10px rgba(0,0,0,0.36);
+	} @else {
+		-webkit-box-shadow: 12px 12px 15px -4px rgba(0,0,0,0.36);
+		-moz-box-shadow: 12px 12px 15px -4px rgba(0,0,0,0.36);
+		box-shadow: 12px 12px 15px -4px rgba(0,0,0,0.36);
+	}
+	@include transition(0.2s);
 }
 
 html, body, .page {
@@ -96,28 +128,16 @@ html, body, .page {
 }
 
 main{
-	padding: $small 0;
-	margin: $large 0 $huge 0;
+	padding: 150px 0;
+	margin: $huge 0 $large 0;
 }
 
-.about__content{
-	margin-top: 255px;
-}
-
-h2, h3, h4 {
+h2, h3, h4, a, p {
 	text-align: center;
 }
 
 a {
 	font-size: $large;
-	text-align: center;
-}
-
-a:hover {
-}
-
-p{
-	text-align: center;
 }
 
 .section-title{
@@ -169,6 +189,7 @@ header {
 .contact__form{
 	fieldset {
 		@include center;
+		
 		text-align: left;
 		margin: $large auto;
 		border: none;
@@ -181,7 +202,7 @@ header {
 
 		input, textarea {
 			@include reset;
-			border: $input-border;
+			@include input-hover(false);
 			width: $full-width;
 			padding: $large;
 			margin-bottom: $small;
@@ -192,11 +213,12 @@ header {
 			font-family: $primary-font;
 		}
 
-		input:hover, textarea:hover{
-			border: $border;
+		input:hover, textarea:hover, input:focus, textarea:focus{
+			@include input-hover(true);
 		}
 
 		.submit-btn{
+			@include btn-hover(false);
 			display: block;
 			width: 100%;
 			padding: $large;
@@ -206,6 +228,7 @@ header {
 		}
 		
 		.submit-btn:hover{
+			@include btn-hover(true);
 		}
 	}
 }
@@ -215,9 +238,16 @@ header {
 	.project__preview{
 		@include reset;
 		@include center;
-		border: $border;
+		@include box-shadow(false);
+		display: block;
 		width: 100%;
 		max-width: 1024px;
+		margin-bottom: 50px;
+		border: 1px solid $secondary-color;
+		border-radius: 10px;
+	}
+	.project__preview:hover{
+		@include box-shadow(true);
 	}
 	.project__title{
 		margin: $tiny;
@@ -251,10 +281,9 @@ header {
 			}
 	}
 
-	main, .about__content{
-		margin-top: $huge;
+	main{
+		padding-top: $huge;
 	}
-
 
 }
 	
