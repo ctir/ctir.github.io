@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description" content="Charles Tiriamai is a Web Developer dedicated to crafting 
+	<meta name="description" content="Charles Tiriamai is a friendly Web Developer dedicated to crafting 
 		usable, secure and SEO friendly software. " />
 	<title>Charles Tiriamai | Web Developer</title>
 
@@ -27,12 +27,11 @@
 
 <body>
 	<div class="page background">
-		<a id="top"></a>
 		<header class="header__bg">
 			<nav id="top-nav" class="top-nav">
 				<ul class="nav__link-list">
 					<li class="nav__link-container">
-						<a href="#top" title="Return to the top of the page" class="nav__link">
+						<a href="#" title="Return to the top of the page" class="nav__link">
 							<h1> CHARLES TIRIAMAI </h1>
 						</a>
 					</li>
@@ -40,7 +39,7 @@
 						<a href="#about-section" title="Learn more about Me" class="nav__link">About Me</a>
 					</li>
 					<li class="nav__link-container">
-						<a href="#contact-section" title="Send Me a message" class="nav__link">Contact Us</a>
+						<a href="#contact-section" title="Send Me a message" class="nav__link">Contact Me</a>
 					</li>
 					<li class="nav__link-container">
 						<a href="#project-section" title="View some of my projects" class="nav__link">Projects </a>
@@ -65,7 +64,7 @@
 
 		<main id="contact-section" class="contact__form">
 			<h2 class="section-title">Contact Me</h2>
-			<form action="" class="contact-form">
+			<form action="sendEmail()" class="contact-form">
 				<h3>All fields are required!</h3>
 				<fieldset>
 					<label class="contact__form-label" for="input__name">Name:* <span class="error-msg">A name must be
@@ -76,9 +75,9 @@
 							required</span></label>
 					<input type="email" id="input__email" name="input__email" aria-placeholder="Enter your email here..."
 						placeholder="Enter your email here..." aria-required required>
-					<label class="contact__form-label" for="input__message">Message:* <span class="error-msg">This field must not
+					<label class="contact__form-label" for="input__msg">Message:* <span class="error-msg">This field must not
 							be empty</span></label>
-					<textarea id="input__message" name="input__message" aria-placeholder="Enter your message here..."
+					<textarea id="input__msg" name="input__msg" aria-placeholder="Enter your message here..."
 						placeholder="Enter your message here..." aria-required required></textarea>
 					<button type="submit" class="submit-btn">Submit</button>
 				</fieldset>
@@ -130,9 +129,6 @@
 			</figure>
 		</main>
 
-		<a href="#top" title="Return to the top of the page" class="return-link">
-			<h4>Return to top</h4>
-		</a>
 	</div>
 
 	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
